@@ -1,168 +1,197 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
-<link>
-<title>ChatApp</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-<link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
-<link rel="shortcut icon" href="/images/favicon/favicon.ico" />
-<link rel="stylesheet" href="style.css" />
-</head>
+  <link />
+  <title>ChatApp</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    href="/images/favicon/favicon-96x96.png"
+    sizes="96x96"
+  />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 
-<body>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand logo" href="#">chat<span>app</span></a>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand logo" href="#">chat<span>app</span></a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <ul class="navbar-nav align-items-center ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Log In</a>
-                        </li>
-                        <button class="btn btn-login">Try It Free</button>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav align-items-center ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+              </li>
+              <button class="btn btn-login">Try It Free</button>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <section class="hero">
-            <div class="container-fluid">
-                <div class="top d-flex row">
-                    <div
-                        class="left d-flex flex-column gap-2 col-12 mt-5 mb-5 col-md-6 col-lg-6 justify-content-center">
-                        <h1 class="text-white">
-                            Have your <br />
-                            best chat
-                        </h1>
-                        <p class="text-white">Fast, easy & unlimited team chat.</p>
-                        <div class="btns">
-                            <button class="btn-common free-btn rounded-5">
-                                <span class="btn-text">Try it Free</span>
-                                <div class="arrow-blob"></div>
-                            </button>
+      <section class="hero">
+        <div class="container-fluid">
+          <div class="top d-flex row">
+            <div
+              class="left d-flex flex-column gap-2 col-12 mt-5 mb-5 col-md-6 col-lg-6 justify-content-center"
+            >
+              <h1 class="text-white">
+                Have your <br />
+                best chat
+              </h1>
+              <p class="text-white">Fast, easy & unlimited team chat.</p>
+              <div class="btns">
+                <button class="btn-common free-btn rounded-5">
+                  <span class="btn-text">Try it Free</span>
+                  <div class="arrow-blob"></div>
+                </button>
 
-                            <button class="btn-common demo-btn rounded-5">
-                                <span class="btn-text">Get a Demo</span>
-                                <div class="arrow-blob"></div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="right col-12 col-md-6 col-lg-6 mb-5">
-                        <img class="img-fluid mx-auto d-block" src="images/hero.png" alt="hero_img" />
-                    </div>
-                </div>
+                <button class="btn-common demo-btn rounded-5">
+                  <span class="btn-text">Get a Demo</span>
+                  <div class="arrow-blob"></div>
+                </button>
+              </div>
             </div>
-        </section>
-        <section class="info container-fluid pt-5">
-            <div class="container-fluid d-flex justify-content-center flex-column align-items-center">
-                <h1 class="text-center">Instant Team Chats</h1>
-                <p class="para mb-5">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                    Nulla consequat massa.
-                </p>
-                <img class="img-fluid" src="images/mockup.jpg" alt="info_img" />
+            <div class="right col-12 col-md-6 col-lg-6 mb-5">
+              <img
+                class="img-fluid mx-auto d-block"
+                src="images/hero.png"
+                alt="hero_img"
+              />
             </div>
-        </section>
-        <section class="rating row justify-content-center pt-3">
-            <img class="img-fluid col-12 col-md-6 mx-auto mt-2 mb-5" src="images/people.png" alt="rating_img"
-                style="margin-left: 50px" />
-            <div class="right-side col-md-6 d-flex flex-column align-items-center">
-                <h1 class="text-center mt-5 mb-3">
-                    Perfect Solution for <br />
-                    Small Businesses
-                </h1>
-                <p>Pricing plans that fit like a glove.</p>
-                <div class="btns d-flex gap-4">
-                    <button class="free-btn btn-bottom rounded-pill">
-                        <span class="btn-text">Try it free</span>
-                        <div class="arrow-blob"></div>
-                    </button>
+          </div>
+        </div>
+      </section>
+      <section class="info container-fluid pt-5">
+        <div
+          class="container-fluid d-flex justify-content-center flex-column align-items-center"
+        >
+          <h1 class="text-center">Instant Team Chats</h1>
+          <p class="para mb-5">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa.
+          </p>
+          <img class="img-fluid" src="images/mockup.jpg" alt="info_img" />
+        </div>
+      </section>
+      <section class="rating row justify-content-center pt-3">
+        <img
+          class="img-fluid col-12 col-md-6 mx-auto mt-2 mb-5"
+          src="images/people.png"
+          alt="rating_img"
+          style="margin-left: 50px"
+        />
+        <div class="right-side col-md-6 d-flex flex-column align-items-center">
+          <h1 class="text-center mt-5 mb-3">
+            Perfect Solution for <br />
+            Small Businesses
+          </h1>
+          <p>Pricing plans that fit like a glove.</p>
+          <div class="btns d-flex gap-4">
+            <button class="free-btn btn-bottom rounded-pill">
+              <span class="btn-text">Try it free</span>
+              <div class="arrow-blob"></div>
+            </button>
 
-                    <button class="demo-btn btn-bottom rounded-pill">
-                        <span class="btn-text">Get a demo</span>
-                        <div class="arrow-blob"></div>
-                    </button>
-                </div>
-                <div class="line"></div>
-                <div class="rating-here d-flex align-items-start mb-5">
-                    <img class="star" src="images/star.png" alt="5 stars here" />
-                    <p class="business">
-                        5,200 businesses
-                        <span class="light">
-                            use ChatApp <br />
-                            and they rate it as
-                        </span>
-                        5-stars.
-                    </p>
-                </div>
-            </div>
-        </section>
+            <button class="demo-btn btn-bottom rounded-pill">
+              <span class="btn-text">Get a demo</span>
+              <div class="arrow-blob"></div>
+            </button>
+          </div>
+          <div class="line"></div>
+          <div class="rating-here d-flex align-items-start mb-5">
+            <img class="star" src="images/star.png" alt="5 stars here" />
+            <p class="business">
+              5,200 businesses
+              <span class="light">
+                use ChatApp <br />
+                and they rate it as
+              </span>
+              5-stars.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="d-lg-flex d-block container">
-        <div class="left mt-5">
-            <a class="navbar-brand logo text-primary" href="#">chat<span>app</span></a>
-            <p class="mb-0">
-                The last team chat you <br />
-                will ever need.
-            </p>
-            <div class="copyright">© Copyright ChatApp Inc.</div>
+      <div class="left mt-5">
+        <a class="navbar-brand logo text-primary" href="#"
+          >chat<span>app</span></a
+        >
+        <p class="mb-0">
+          The last team chat you <br />
+          will ever need.
+        </p>
+        <div class="copyright">© Copyright ChatApp Inc.</div>
+      </div>
+      <div class="right">
+        <div class="d-flex justify-content-between flex-wrap mt-5 gap-4">
+          <ul>
+            <li class="main f-link"><a href="#">Help</a></li>
+            <li class="inside f-link"><a href="#">Support</a></li>
+            <li class="inside f-link"><a href="#">Knowledgebase</a></li>
+            <li class="inside f-link"><a href="#">Tutorials</a></li>
+          </ul>
+          <ul>
+            <li class="main f-link"><a href="#">Feature</a></li>
+            <li class="inside f-link"><a href="#">Screen Sharing</a></li>
+            <li class="inside f-link"><a href="#">iOS & Android Apps</a></li>
+            <li class="inside f-link"><a href="#">File Sharing</a></li>
+            <li class="inside f-link"><a href="#">User Management</a></li>
+          </ul>
+          <ul>
+            <li class="main f-link"><a href="#">Company</a></li>
+            <li class="inside f-link"><a href="#">About Us</a></li>
+            <li class="inside f-link"><a href="#">Careers</a></li>
+            <li class="inside f-link"><a href="#">Contact Us</a></li>
+          </ul>
+          <ul>
+            <li class="main f-link"><a href="#">Contact Us</a></li>
+            <li class="inside f-link"><a href="#">info@chatapp.com</a></li>
+            <li class="inside f-link"><a href="#">1-800-200-300</a></li>
+            <li class="inside f-link">
+              <a href="#"
+                >3500 Deer Creek Rd <br />
+                Palo Alto, CA</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="right">
-            <div class="d-flex justify-content-between flex-wrap mt-5 gap-4">
-                <ul>
-                    <li class="main f-link"><a href="#">Help</a></li>
-                    <li class="inside f-link"><a href="#">Support</a></li>
-                    <li class="inside f-link"><a href="#">Knowledgebase</a></li>
-                    <li class="inside f-link"><a href="#">Tutorials</a></li>
-                </ul>
-                <ul>
-                    <li class="main f-link"><a href="#">Feature</a></li>
-                    <li class="inside f-link"><a href="#">Screen Sharing</a></li>
-                    <li class="inside f-link"><a href="#">iOS & Android Apps</a></li>
-                    <li class="inside f-link"><a href="#">File Sharing</a></li>
-                    <li class="inside f-link"><a href="#">User Management</a></li>
-                </ul>
-                <ul>
-                    <li class="main f-link"><a href="#">Company</a></li>
-                    <li class="inside f-link"><a href="#">About Us</a></li>
-                    <li class="inside f-link"><a href="#">Careers</a></li>
-                    <li class="inside f-link"><a href="#">Contact Us</a></li>
-                </ul>
-                <ul>
-                    <li class="main f-link"><a href="#">Contact Us</a></li>
-                    <li class="inside f-link"><a href="#">info@chatapp.com</a></li>
-                    <li class="inside f-link"><a href="#">1-800-200-300</a></li>
-                    <li class="inside f-link">
-                        <a href="#">3500 Deer Creek Rd <br />
-                            Palo Alto, CA</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
