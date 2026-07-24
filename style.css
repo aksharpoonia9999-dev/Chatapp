@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -13,17 +10,67 @@
 a {
   text-decoration: none;
 }
-.top {
-  display: flex;
-  justify-content: center;
-}
-
 header {
   background-color: #1e71ff;
-  margin-bottom: -1px;
+  padding: 35px 0 0 0;
+}
+.navbar {
+  padding: 0;
+}
+.navbar-collapse {
+  transition: all 600ms ease-out !important;
+}
+.navbar-toggler-icon {
+  background-image: none;
+  width: 25px;
+  height: 30px;
+  position: relative;
+}
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon {
+  background: #fff;
+  height: 2px;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.navbar-toggler-icon {
+  display: block;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 25px;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 .nav-item .nav-link {
   padding: 0 !important;
+  white-space: nowrap;
 }
 .navbar-nav {
   display: flex;
@@ -32,11 +79,22 @@ header {
 .container-fluid {
   padding: 0 40px;
 }
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler,
+.navbar-toggler:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  padding: 0 !important;
+}
+
 .nav-link {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  line-height: 100%;
+  line-height: 120%;
   letter-spacing: 0%;
   color: #ffffff;
 }
@@ -44,8 +102,15 @@ header {
 .nav-link:hover {
   color: white;
 }
-.navbar-brand:hover {
-  color: white;
+
+.logo,
+.logo:hover,
+.logo:focus,
+.logo:active {
+  color: rgba(255, 255, 255, 1);
+}
+.navbar-brand:focus {
+  color: rgba(255, 255, 255, 1);
 }
 
 .btn-login {
@@ -64,6 +129,7 @@ header {
   overflow: hidden;
   z-index: 1;
   transition: color 0.7s ease;
+  white-space: nowrap;
 }
 
 .btn-login::after {
@@ -72,7 +138,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 110%;
   background-color: #ffffff;
   z-index: -1;
   clip-path: circle(0% at 50% 50%);
@@ -147,6 +213,7 @@ header {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+  white-space: nowrap;
 }
 .btn-text {
   position: relative;
@@ -176,17 +243,13 @@ header {
 .info h1 {
   font-weight: 500;
 }
-.text-center {
+.heading {
   color: rgba(43, 53, 62, 1);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 45px;
   line-height: 128%;
   letter-spacing: 0%;
-  text-align: center;
-}
-.star {
-  margin-left: 10px;
 }
 .para {
   max-width: 566px;
@@ -196,6 +259,7 @@ header {
   line-height: 162%;
   letter-spacing: 0%;
   text-align: center;
+  margin-bottom: 60px;
 }
 .info div p {
   font-family: "Roboto", sans-serif;
@@ -215,26 +279,26 @@ header {
   gap: 25px;
 }
 
-.right-side h1 {
+.right-content h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   letter-spacing: 0%;
 }
 
-.right-side p {
+.right-content p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   letter-spacing: 0%;
   color: rgba(43, 53, 62, 0.7);
 }
-.right-side .business {
+.business {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 162%;
   letter-spacing: 0%;
 }
-.right-side .light {
+.light {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -261,19 +325,34 @@ footer .left p {
   cursor: pointer;
   z-index: 1;
   border-radius: 60px;
+  white-space: nowrap;
 }
 .btn-text {
   position: relative;
   z-index: 3;
   transition: color 300ms ease-out;
 }
+.m-42 {
+  margin-top: 42px;
+  color: rgba(43, 53, 62, 1);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 128%;
+  letter-spacing: 0%;
+  text-align: center;
+}
 
+.try-btn {
+  max-width: 167px;
+  width: 100%;
+}
 .btn-bottom .arrow-blob {
   position: absolute;
   top: 0;
   right: 0;
   width: 150%;
-  height: 110%;
+  height: 100%;
   background-color: rgba(30, 113, 255, 1);
   z-index: 2;
   clip-path: polygon(
@@ -307,6 +386,7 @@ footer .left p {
   line-height: 162%;
   letter-spacing: 0%;
   color: rgba(43, 53, 62, 0.7);
+  margin-top: auto;
 }
 
 footer .left p {
@@ -317,13 +397,17 @@ footer .left p {
   letter-spacing: 0%;
   color: #2b353eb2;
 }
-
-.copyright {
-  color: #2b353eb2;
+footer .container,
+.container {
+  max-width: 1160px;
 }
 
 ul {
   padding: 0;
+}
+.top {
+  gap: 69px;
+  padding: 79px 0 140px 0;
 }
 
 ul .main a {
@@ -341,7 +425,9 @@ ul .main {
 ul .inside {
   margin-bottom: 12px;
 }
-
+.rating {
+  padding: 124px 0 127px 0;
+}
 ul .inside a {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -354,6 +440,57 @@ ul .inside a {
 .row {
   --bs-gutter-x: 0rem;
 }
+.rating {
+  overflow: hidden;
+}
+
+.rating .row {
+  margin: 0;
+}
+
+.people {
+  max-width: 816px;
+  display: block;
+  object-fit: cover;
+}
+
+.rating-content {
+  max-width: 520px;
+  margin-left: 100px;
+}
+.sub-heading {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  color: rgba(43, 53, 62, 0.7);
+  line-height: 162%;
+  letter-spacing: 0%;
+  margin: 30px 0 90px 0;
+}
+@media (max-width: 991.98px) {
+  .rating {
+    padding: 80px 0;
+  }
+
+  .people {
+    width: 100%;
+  }
+  .navbar-nav {
+    margin-right: 30px;
+  }
+  .rating-content {
+    max-width: 650px;
+    padding: 0 12px;
+    margin-left: 0 !important;
+  }
+  .free-btn {
+    max-width: 172px;
+    width: 100%;
+  }
+  .demo-btn {
+    padding: 14px 43px 17px 41px;
+  }
+}
 
 @media (max-width: 320px) {
   .btn-common {
@@ -365,10 +502,10 @@ ul .inside a {
   .star {
     width: 120px;
   }
-  .right-side .business {
+  .business {
     font-size: 14px;
   }
-  .right-side .light {
+  .right-content .light {
     font-size: 14px;
   }
   .line {
@@ -380,28 +517,49 @@ ul .inside a {
   .rating-here {
     gap: 15px;
   }
-  .text-center {
+  .m-42 {
     font-size: 30px;
+  }
+  .heading {
+    font-size: 28px !important;
+  }
+  .sub-heading {
+    font-size: 16px;
   }
 }
 @media (max-width: 425px) {
   .btn-common {
-    padding: 10px 15px;
+    padding: 10px 15px !important;
+    max-width: 119px;
   }
+  .sub-heading {
+    font-size: 18px;
+  }
+  .btns {
+    gap: 20px;
+  }
+  .business,
+  .light {
+    font-size: 14px !important;
+  }
+  .info {
+    padding: 40px 0 !important;
+  }
+
   .btn-bottom {
     padding: 10px 15px;
+  }
+  .try-btn {
+    max-width: 119px;
   }
   .star {
     width: 120px;
   }
-  .right-side .business {
-    font-size: 14px;
-  }
-  .right-side .light {
+  .right-content .light {
     font-size: 14px;
   }
   .container-fluid {
-    padding: 0 20px;
+    padding: 0 12px 20px 12px;
   }
   .line {
     margin: 30px 0 30px 0;
@@ -412,14 +570,54 @@ ul .inside a {
   .rating-here {
     gap: 15px;
   }
-  .text-center {
+  .heading {
     font-size: 30px;
   }
+  ul .main {
+    margin-bottom: 5px;
+  }
 }
+@media (max-width: 375px) {
+  .m-42 {
+    font-size: 27px !important;
+  }
+}
+@media (max-width: 768px) {
+  .copyright {
+    margin-bottom: 30px;
+  }
+  ul .main {
+    margin-bottom: 10px;
+  }
+  .btn-common {
+    padding: 16px 38px;
+  }
+  header {
+    padding: 20px 0 0 0;
+  }
+}
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 36px;
+  }
+  .m-42 {
+    font-size: 34px;
+  }
+  .business,
+  .light {
+    font-size: 16px;
+  }
+  .sub-heading {
+    margin: 30px 0 30px 0 !important;
+  }
+  .line {
+    margin-top: 60px;
+  }
+}
+
 @media (min-width: 992px) {
   footer {
-    padding: 90px 139px 30px 140px;
-    gap: 228px;
+    gap: 211px;
   }
 }
 
@@ -494,32 +692,32 @@ ul .inside a {
     width: 100%;
   }
 
-  .rating .right-side h1 {
+  .rating .right-content h1 {
     margin-top: 42px;
     margin-bottom: 30px;
   }
-  .rating .right-side p {
+  .rating .right-content p {
     margin-bottom: 60px;
   }
 
-  .right-side {
+  .right-content {
     max-width: 475px;
     width: 100%;
     display: block !important;
   }
 
-  .right-side h1 {
+  .right-content h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 45px;
     line-height: 128%;
     letter-spacing: 0%;
   }
-  .text-center {
+  .heading {
     text-align: left !important;
   }
 
-  .right-side p {
+  .right-content p {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 21px;
@@ -537,11 +735,8 @@ ul .inside a {
   }
 
   footer {
-    padding: 90px 139px 30px 140px;
-    gap: 228px;
-  }
-  .copyright {
-    margin-top: 285px;
+    margin: 42px 0 30px 0px;
+    gap: 211px;
   }
 
   .f-link {
@@ -553,5 +748,65 @@ ul .inside a {
   }
   .rating {
     padding: 124px 138px 137px 0px !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .people {
+    max-width: 700px;
+  }
+  .heading {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1280px) {
+  .top {
+    gap: 0 !important;
+  }
+  .navbar-nav {
+    align-items: center !important;
+    width: fit-content;
+    gap: 20px;
+  }
+  .btn-login {
+    width: 100%;
+  }
+  .people {
+    max-width: 670px;
+  }
+  .info {
+    padding: 60px 0 180px 0;
+  }
+  .heading {
+    font-size: 38px;
+  }
+  .sub-heading {
+    margin-bottom: 60px;
+  }
+  .line {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 1160px) {
+  .heading {
+    font-size: 36px;
+  }
+  .business,
+  .light {
+    font-size: 16px;
+  }
+  .people {
+    max-width: 650px;
+  }
+  .rating-content {
+    margin-left: 50px;
+  }
+  .info {
+    padding: 40px 0 100px 0;
+  }
+}
+@media (max-width: 1100px) {
+  .people {
+    max-width: 620px;
   }
 }
