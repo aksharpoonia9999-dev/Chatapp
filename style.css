@@ -309,6 +309,9 @@ header {
 footer .left p {
   margin-top: 18px;
 }
+.footer-left {
+  max-width: 168px;
+}
 .btn-bottom {
   position: relative;
   border: 1px solid rgba(30, 113, 255, 1);
